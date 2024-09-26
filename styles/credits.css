@@ -1,0 +1,88 @@
+body {
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 120px;
+    letter-spacing: -5px;
+    font-weight: bold;
+    text-shadow: 0px 0px 0px;
+    text-wrap: nowrap;
+    animation: h1PageLoad 3s;
+}
+
+p {
+    font-family: "hiragino-kaku-gothic-pron", sans-serif;
+    font-size: 18px;
+    line-height: 130%;
+}
+
+#article {
+    max-width: 1400px;
+    padding-top: 100px;
+}
+
+@media screen and (max-width: 1600px) {
+    #article {
+        max-width: 90%;
+    }
+    
+}
+
+.creds-img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.creds-grid {
+    display:grid;
+    grid-template-columns: 1fr 4fr;
+    margin-bottom: 30px;
+}
+
+.creds-screen {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: rgb(var(--primary-rgb) / 15%);
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+    left: 0%;
+    transition: opacity 0.7s, left 1s;
+}
+
+.creds-screen>h2 {
+    font-size: 40px;
+    letter-spacing: 6px;
+}
+
+.creds-article-name {
+    color: black;
+    background-color: aqua;
+    padding: 3px 10px 3px 10px;
+    font-weight: bolder;
+}
+
+@media screen and (max-width: 950px) {
+    .creds-img {
+        width: 150px;
+        height: 300px;
+    }
+    .creds-grid {
+        height: 300px;
+        margin-bottom: 20px;
+    }
+    .creds-screen {
+        padding: 25px;
+        padding-top: 40px;
+    }
+    .creds-screen>h2 {
+        font-size: 20px;
+        letter-spacing: 6px;
+    }
+}

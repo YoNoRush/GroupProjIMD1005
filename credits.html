@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/credits.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/x-icon" href="images/pdc_logo.png"> 
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+    <script src="scripts/scripts.js"></script>
+    <script> //Fonts
+        (function (d) {
+            var config = {
+                kitId: 'amm1zrq',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+        })(document);
+    </script>
+    <title>IMD1005 a4</title>
+</head>
+
+<body>
+    <header>
+        <nav id="sidebar">
+            <div class="screen-overlay"></div>
+            <a id="home-sidebar-button" onclick="toHomeFromArticle()"></a>
+            <a id="anime-sidebar-button" href="anime.html?fromArticle=true"></a>
+            <a id="threed-sidebar-button" href="3d.html?fromArticle=true"></a>
+            <a id="twopointfived-sidebar-button" href="25d.html?fromArticle=true"></a>
+            <a id="credits-sidebar-button" class="sidebar-button-selected" href="credits.html?fromArticle=true"></a>
+        </nav>
+    </header>
+    <div class="main-padding threed-article" id="article">
+        <div class="title">
+            <h1>Credits</h1>
+            <h2>PDC ZINE EDITORS</h2><br><br>
+        </div>
+        <br>
+        <br>
+        <div class="creds-grid">
+            <img class="creds-img" src="images/Credits_IMG_Caelan.jpeg" alt="portait-Caelan">
+            <div class="creds-screen">
+                <div class="screen-overlay"></div>
+                <h2>Caelan Douglas</h2>
+                <br>
+                <p><span class="creds-article-name">3D Animation</span> I'm a hobbyist computer graphics artist. The medium fascinates me because of its blend of technology and art.</p>
+            </div>
+        </div>
+
+        <div class="creds-grid">
+            <img class="creds-img" src="images/Anjali profile.jpg" alt="portait-Anjali">
+            <div class="creds-screen">
+                <div class="screen-overlay"></div>
+                <h2>Anjali Salagala</h2>
+                <br>
+                <p><span class="creds-article-name">Anime</span> I am passionate about game development, with a knack for creating captivating concept art and eager to blend creativity with technical skills to craft unforgettable pieces.</p>
+            </div>
+        </div>
+
+        <div class="creds-grid">
+            <img class="creds-img" src="images/awad.png" alt="portait-Mohamad">
+            <div class="creds-screen">
+                <div class="screen-overlay"></div>
+                <h2>Mohamad Awad</h2>
+                <br>
+                <p><span class="creds-article-name">2.5D Animation</span> I'm a cartoonist & animator, always eager to explore new mediums of art and animation! 2.5D is awesome to me because I love both 2D and 3D animation, so having an amalgamation of both, where we can get the best of both worlds, is great to me!</p>
+            </div>
+        </div>
+
+        <div class="creds-grid">
+            <img class="creds-img" src="images/Jason_Portrait.png" alt="portait-Jason">
+            <div class="creds-screen">
+                <div class="screen-overlay"></div>
+                <h2>Jason Okotete</h2>
+                <br>
+                <p><span class="creds-article-name">2.5D Animation</span> Being an artist and 2D animator myself, 2.5D movies like Spiderman: Across The Spiderverse. really blew my expectations when it comes to displaying 2D animations in a 3D space, and this is just the beginning. I can't wait to see what happens next!</p>
+            </div>
+        </div>
+
+        <div class="creds-grid">
+            <img class="creds-img" src="images/Kenneth_Portrait.png" alt="portait-Kenneth">
+            <div class="creds-screen">
+                <div class="screen-overlay"></div>
+                <h2>Kenneth Hernandez</h2>
+                <br>
+                <p><span class="creds-article-name">Anime Animation</span> I'm a aspiring animator and filmmaker looking to continue to learn about the wonders of animation through Eastern animation. Seeking the fantasical has always been what has intrigued me and through studying the animation medium, I hope to be able to incorporate the fantastical to my works.</p>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+    </div>
+</body>
+
+</html>

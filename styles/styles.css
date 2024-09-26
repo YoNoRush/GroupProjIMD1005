@@ -1,0 +1,581 @@
+:root {
+    --background-rgb: 15 15 15;
+    /*bg color*/
+
+    --blue-rgb: 33 150 243;
+    --primary-rgb: var(--blue-rgb);
+
+    --blob-color-1: rgb(var(--blue-rgb));
+    --blob-color-2: dodgerblue;
+    --sidebar-width: 90px;
+}
+
+/* Adds padding to content page on left to account for sidebar */
+body {
+    color: white;
+    display: grid;
+    place-items: center;
+    background-color: rgb(var(--background-rgb));
+    overflow: hidden;
+
+    font-family: "Abel", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.main-padding {
+    padding-left: var(--sidebar-width);
+}
+
+/* 
+######################################  SIDEBAR  #####################################
+*/
+
+@keyframes sidebarIn {
+    0% {
+        left: -100px;
+    }
+
+    100% {
+        left: 0px;
+    }
+}
+
+@keyframes sidebarOut {
+    0% {
+        left: 0px;
+    }
+
+    100% {
+        left: -100px;
+    }
+}
+
+@keyframes sidebarInMobile {
+    0% {
+        bottom: -100px;
+    }
+
+    70% {
+        bottom: 0px;
+    }
+}
+
+@keyframes sidebarOutMobile {
+    0% {
+        bottom: 0px;
+    }
+
+    70% {
+        bottom: -100px;
+    }
+}
+
+
+#sidebar {
+    border: 2px solid rgb(var(--primary-rgb));
+    background-color: rgb(var(--primary-rgb) / 15%);
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    border-radius: 1rem;
+    margin-left: -1rem;
+    padding-left: 1rem;
+    margin-bottom: 0rem;
+    padding-bottom: 0rem;
+    height: 70vh;
+    bottom: 15vh;
+    width: var(--sidebar-width);
+    z-index: 20;
+    justify-content: center;
+    gap: 20px;
+}
+
+#sidebar>a {
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: black;
+    cursor: pointer;
+}
+
+#home-sidebar-button{
+    background-image: url("../images/pdc_logo-min.png");
+    background-size: cover;
+    background-size: 100%;
+    background-position: center;
+}
+
+
+#twopointfived-sidebar-button {
+    background-image: url("../images/miles.jpg");
+    background-size: cover;
+    background-size: 125%;
+    background-position: center;
+}
+
+#anime-sidebar-button {
+    background-image: url("../images/Title_IMG_Screen_Anime.jpg");
+    background-size: cover;
+    background-size: 250%;
+    background-position: 70% 10%;
+}
+
+#threed-sidebar-button {
+    background-image: url("../images/Title_IMG_Screen_3D.jpg");
+    background-size: 250%;
+    background-position: 70% 10%;
+}
+
+#credits-sidebar-button{
+    background-image: url("../images/credits.jpg");
+    background-size: 150%;
+    background-position: center;
+}
+
+.sidebar-button-selected {
+    border: 2px solid white;
+}
+
+/*
+######################################  ARTICLES  ####################################
+*/
+
+@keyframes articleIn {
+    0% {
+        opacity: 0%;
+    }
+    /* avoids any jumps from the css loading interrupting the smooth transition */
+    10% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+@keyframes articleOut {
+    0% {
+        opacity: 100%;
+    }
+    50% {
+        opacity: 0%;
+    }
+}
+
+#article {
+    width: 100%;
+    animation: articleIn 2s;
+    transition: opacity 1s;
+}
+
+/*
+######################################  HTML CLASSES  #####################################
+*/
+
+h1 {
+    font-size: 130px;
+    letter-spacing: 6px;
+    font-weight: normal;
+    text-shadow: 0px 0px 10rem #fff;
+}
+h2 {
+    font-size: 24px;
+    letter-spacing: 11px;
+    font-weight: bold;
+}
+
+/* 
+######################################  CARDS  #####################################
+*/
+
+
+* {
+    box-sizing: border-box;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.screen {
+    height: 80vh;
+    width: 35vh;
+    display: flex;
+    border: 3px solid rgb(var(--primary-rgb) / 80%);
+    aspect-ratio: 10 / 16;
+    border-radius: 1rem;
+    background-color: rgb(var(--primary-rgb) / 15%);
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+    left: 0%;
+    transition: opacity 0.7s, left 1s;
+}
+
+#screen-gal {
+    display: flex;
+    gap: 3vmin;
+    position: absolute;
+    top: 100%;
+    transition: top 1.5s;
+}
+
+@keyframes screenCoverIn {
+    0% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+#screen-cover {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    gap: 3vmin;
+    position: absolute;
+    bottom: 0%;
+    height: 100%;
+    transition: bottom 1.5s;
+    animation: 1s ease-in-out screenCoverIn;
+}
+#screen-cover>.left {
+    z-index: 1000;
+    flex: 1;
+}
+#screen-cover>.left>h1 {
+    padding-top: 35vh;
+}
+#screen-cover>.right {
+    z-index: 1000;
+    cursor: pointer;
+    flex: 0.4;
+}
+#screen-cover>.right>img {
+    height: 100px;
+    padding-bottom: 20px;
+}
+
+@keyframes pan-overlay {
+    from {
+        background-position: 0% 0%;
+    }
+
+    to {
+        background-position: 0% -100%;
+    }
+}
+
+.screen-overlay {
+    pointer-events: none;
+    background: linear-gradient(rgb(var(--primary-rgb) / 0.15),
+            rgb(var(--primary-rgb) / 0.15) 3px,
+            transparent 3px,
+            transparent 9px);
+    background-size: 100% 9px;
+    height: 100%;
+    width: 100%;
+    animation: pan-overlay 22s infinite linear;
+    position: absolute;
+    z-index: 2;
+    left: 0px;
+    top: 0px;
+}
+
+@keyframes pan-image {
+    0% {
+        background-position: 36% 42%;
+        background-size: 425%;
+    }
+
+    20% {
+        background-position: 30% 35%;
+        background-size: 425%;
+    }
+
+    20.0001% {
+        /* -- View 2 -- */
+        background-position: 60% 85%;
+        background-size: 425%;
+    }
+
+    40% {
+        background-position: 49% 81%;
+        background-size: 425%;
+    }
+
+    40.0001% {
+        /* -- View 3 -- */
+        background-position: 80% 42%;
+        background-size: 425%;
+    }
+
+    60% {
+        background-position: 84% 33%;
+        background-size: 425%;
+    }
+
+    60.0001% {
+        /* -- View 4 -- */
+        background-position: 0% 0%;
+        background-size: 425%;
+    }
+
+    80% {
+        background-position: 15% 4%;
+        background-size: 425%;
+    }
+
+    80.0001% {
+        /* -- View 5 -- */
+        background-position: 80% 10%;
+        background-size: 425%;
+    }
+
+    100% {
+        background-position: 72% 14%;
+        background-size: 425%;
+    }
+}
+ 
+#screen-image-anime {
+    background-image: url("../images/Title_IMG_Screen_Anime.jpg");
+}
+#screen-image-3d {
+    background-image: url("../images/Title_IMG_Screen_3D.jpg");
+}
+
+#screen-image-2d {
+    background-image: url("../images/Title_IMG_Screen_2D.jpg");
+}
+
+#screen-image-25d {
+    background-image: url("../images/Title_IMG_Screen_25D.jpg");
+}
+
+
+.screen>.screen-image {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    left: 0px;
+    top: 0px;
+    background-size: 300%;
+    background-position: 0% 0%;
+    filter: sepia(100%) hue-rotate(160deg);
+    opacity: 0.6;
+    animation: pan-image 15s linear infinite;
+}
+
+.screen>.screen-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    flex-grow: 1;
+    gap: 4rem;
+    position: relative;
+    z-index: 3;
+    margin: 1rem;
+    padding-bottom: 6rem;
+    border: 1px solid rgb(var(--primary-rgb) / 50%);
+    border-radius: 0.6rem;
+}
+
+
+.screen>.screen-content>.screen-user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+}
+
+.screen>.screen-content>.screen-user:before,
+.screen>.screen-content>.screen-user:after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    background-color: rgb(var(--primary-rgb));
+    border-radius: 1rem;
+    box-shadow: 0px 0px 8px 3px rgb(var(--primary-rgb) / 60%);
+}
+
+.screen>.screen-content>.screen-user:before {
+    height: 2px;
+    width: 50px;
+    translate: -20px -1rem;
+    opacity: 0.75;
+}
+
+.screen>.screen-content>.screen-user:after {
+    height: 3px;
+    width: 30px;
+    translate: 26px calc(-1rem - 0.5px);
+}
+
+.screen>.screen-content>.screen-user> :is(.name, .link) {
+    font-family: "Source Code Pro", monospace;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.screen>.screen-content>.screen-user>.name {
+    position: relative;
+    font-size: 4.25rem;
+    font-weight: 400;
+}
+
+.screen>.screen-content>.screen-user>.name:before,
+.screen>.screen-content>.screen-user>.name:after {
+    content: "";
+    height: 4px;
+    width: 4px;
+    position: absolute;
+    border: 2px solid white;
+    border-radius: 2px;
+}
+
+.screen>.screen-content>.screen-user>.name:before {
+    top: 55%;
+    right: -1.5rem;
+}
+
+.screen>.screen-content>.screen-user>.name:after {
+    top: 45%;
+    left: -1.5rem;
+}
+
+.screen>.screen-content>.screen-user>.link {
+    opacity: 0.8;
+    font-size: 1.25rem;
+    text-shadow: 0px 0px 0.5rem white;
+    font-weight: 400;
+    letter-spacing: 0.3rem;
+    text-decoration: none;
+}
+
+.screen>.screen-content>.screen-user>.link:is(:hover, :focus) {
+    text-decoration: underline;
+}
+
+.card-group {
+    display: none;
+}
+
+/* 
+######################################  RESPONSIVE  #####################################
+*/
+
+@media screen and (max-width: 600px) {
+    /* HTML Classes */
+
+    h1 {
+        font-size: 80px;
+        letter-spacing: 6px;
+        font-weight: normal;
+    }
+    h2 {
+        font-size: 16px;
+        letter-spacing: 7px;
+        font-weight: bold;
+    }
+    /* HTML Classes */
+
+    /* Custom classes */
+    #sidebar {
+        height: var(--sidebar-width);
+        width: 95vw;
+        left: 2.5vw;
+        margin-left: 0;
+        padding-left: 0;
+        margin-bottom: 2.5vw;
+        bottom: 0;
+        flex-direction: row;
+    }
+
+    #sidebar>a {
+        margin: auto 0;
+    }
+
+    .main-padding {
+        padding-left: 0;
+        padding-bottom: var(--sidebar-width);
+    }
+    .screen {
+        scale: 0.6;
+        margin-bottom: 0rem;
+    }
+}
+
+/* Mobile Cards */
+
+@media screen and (max-width: 500px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .card-group {
+        display: flex;
+    }
+
+    .gallery {
+        display: none;
+    }
+    
+    #screen-gal {
+        display: none;
+        gap: 0vmin;
+    }
+
+    #screen-image-anime {
+        background:
+        linear-gradient(
+          rgba(0, 0, 0, 0.6), 
+          rgba(0, 0, 0, 0.6)
+        ),
+        url("../images/Title_IMG_Screen_Anime.jpg");
+    }
+
+    .screen {
+        height: 180vmin;
+        width: 100vmin;
+        aspect-ratio: 5 / 7;
+    }
+
+    .screen>.screen-image {
+        opacity: 1;
+    }
+    
+    .card-group {
+        position: relative;
+        right: 0.5%;
+        bottom: 10%;
+    }
+
+    .card-group > .screen:nth-child(2) {
+        transform: translateX(-160%) rotate(-3deg);
+        z-index: -1;
+    }
+
+    .card-group > .screen:nth-child(3) {
+        transform: translate(-330%, -1.5%) rotate(-3deg);
+        z-index: -2;
+    }
+
+    .card-group > .screen:nth-child(4) {
+        transform: translate(-490%, -3%) rotate(2deg);
+        z-index: -3;
+    }
+}

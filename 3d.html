@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/3d.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+    <script src="scripts/scripts.js"></script>
+    <link rel="icon" type="image/x-icon" href="images/pdc_logo.png"> 
+    <script> //Fonts
+        (function (d) {
+            var config = {
+                kitId: 'amm1zrq',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+        })(document);
+    </script>
+    <title>IMD1005 a4</title>
+</head>
+
+<body>
+    <header>
+        <nav id="sidebar">
+            <div class="screen-overlay"></div>
+            <a id="home-sidebar-button" onclick="toHomeFromArticle()"></a>
+            <a id="anime-sidebar-button" href="anime.html?fromArticle=true"></a>
+            <a id="threed-sidebar-button" class="sidebar-button-selected" href="3d.html?fromArticle=true"></a>
+            <a id="twopointfived-sidebar-button" href="25d.html?fromArticle=true"></a>
+            <a id="credits-sidebar-button" href="credits.html?fromArticle=true"></a>
+        </nav>
+    </header>
+    <div class="main-padding threed-article" id="article">
+        <div class="title">
+            <h2>FROM CLAY TO COMPUTERS</h2>
+            <h1>3D Animation</h1>
+            <h1 class="fall1">3D Animation</h1>
+            <h1 class="fall2">3D Animation</h1>
+        </div>
+        <div class="section-grid-4-1">
+            <div class="main-image img-screen">
+                <p class="image-embed-text">WALL-E, a 2008 3D animated Pixar film</p>
+                <div class="screen-overlay"></div>
+                <img src="images/3D_IMG_walle.jpg" alt="Wall-E_Section1_IMG">
+            </div>
+            <p class="article-justify">From stop motion to computer graphics, 3D is one of the most prevalent forms of animation today. Finding its roots in stop-motion, where models (often made of clay) were meticulously posed and moved by hand, 3D animation quickly evolved upon the dawn of powerful workstation computers.<br><br>Now, 3D is used almost everywhere - CGI in live action films, cutscenes in games, 3D animated films, and even in some cases as a tool in traditional animation as well.</p>
+        </div>
+        <div class="section-vid">
+            <video src="images/3D_VID_clay.webm" autoplay loop muted playsinline alt="Clay_Header_Video"></video>
+            <h1>STOP MOTION</h1>
+        </div>
+        <div class="section-vid-padding"></div>
+        <div class="section-grid-2-3 article-justify">
+            <p>One of the most beloved forms of animation comes in the form of stop-motion. While less popular in modern media, it is nonetheless <span class="highlight">the pioneer of 3D animation.</span> Animators would, typically, craft and move clay models, taking a snapshot of each frame as they did so.<br><br>A meticulous form of animation, stop-motion required the animator to create natural movement whilst avoiding causing any disruptions in the scene or camera that would be immediately apparent on film. Unlike modern animation techniques, there was generally no form of onion-skinning or any way to preview previous frames - making natural movement much harder to achieve.<br><br><span class="highlight">Stop motion has a recognizable human touch to it,</span> giving it a unique feel that is usually unreplicated by other forms of animation. One of the most popular stop-motion films is Wallace and Gromit, featured right.</p>
+            <div class="main-image img-screen">
+                <p class="image-embed-text">Wallace and Gromit, from the self-titled short film series</p>
+                <div class="screen-overlay"></div>
+                <img src="images/3D_IMG_wg.jpg" alt="3DPortrait-Section2-IMG">
+            </div>
+        </div>
+        <div class="section-vid">
+            <video src="images/3D_VID_327.webm" autoplay loop muted playsinline alt="Agent327_Header_Video"></video>
+            <h1>COMPUTER GRAPHICS</h1>
+        </div>
+        <div class="section-vid-padding"></div>
+        <div class="section-grid article-justify">
+            <div class="main-image img-screen">
+                <p class="image-embed-text">Juggler, an early 3D animation rendered on the Commodore Amiga 1000, a personal computer from 1985.</p>
+                <div class="screen-overlay"></div>
+                <video src="images/3D_VID_juggler.webm" autoplay loop muted playsinline alt="Juggler_Section3_Video"></video>
+            </div>
+            <div>
+                <p><span class="highlight">From the moment workstation computers had the ability to render graphics, 3D animation was an interest.</span> Some of the first (rudimentary) CAD software came in the late 60s and early 1970s, and along with it some very basic animations. By the 1980s, personal computers such as the Amiga were capable of creating ray-casted 3D renders, as shown.<br><br>In 1995, the first feature length film using entirely 3D animation, Toy Story, was released. <span class="highlight">This marked a turning point in computer graphics animation</span> - it had previously been used for CGI in live action films and short films.<br><br>By the late 90s, multiple studios were racing each other (and themselves) to create new films and improve on CG technology.</p>
+            </div>
+        </div>
+        <div class="section-grid-2-3 article-justify">
+            <div>
+                <p><span class="highlight">Computer graphics is a blend of technology and art.</span> It allows animators to create amazing effects, detailed worlds, and immersive experiences.<br><br>Now, as personal computers become ever more powerful - especially in the graphics front - it's easier than ever for any hobbyist to dabble in 3D animation, especially with the amazing state of software, with tools such as Blender, Substance Painter, and ZBrush all offering exciting new features every year.</p>
+            </div>
+            <div class="main-image img-screen">
+                <p class="image-embed-text">Blender, free and open source multi-purpose CG software</p>
+                <div class="screen-overlay"></div>
+                <img src="images/3D_IMG_blender.jpg" alt="Blender_Section3_IMG">
+            </div>
+        </div>
+        <div class="section-padding"></div>
+        <div class="section-grid">
+            <div>
+                <h2>Attributions</h2><br><br>
+            </div>
+            <div>
+                <p><span class="highlight">Article by Caelan</span><br><br></p>
+                <p>1. WALL-E, by Pixar<br><br>2. Compatible Claymation, by mamshmam - https://www.youtube.com/watch?v=K8nF1Rw3rtc<br><br>3. Wallace and Gromit, by Aardman Animations - http://industriasdelcine.com/wp-content/uploads/2018/01/wallace-and-gromit.jpg<br><br>4. Agent 327, by Blender Animation Studios - https://www.youtube.com/watch?v=mN0zPOpADL4<br><br>5. Juggler, Commodore - http://www.etwright.org/cghist/juggler.html<br><br>6. Screenshot of Blender 4.0, by me
+                </p>
+            </div>
+        </div>
+        <div class="section-padding"></div>
+    </div>
+</body>
+
+</html>

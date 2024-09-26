@@ -1,0 +1,266 @@
+body {
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 120px;
+    letter-spacing: -5px;
+    font-weight: bold;
+    text-shadow: 0px 0px 0px;
+    text-wrap: nowrap;
+    animation: h1PageLoad 3s;
+}
+
+.fall1 {
+    position: relative;
+    top: -120px;
+    opacity: 70%;
+    color: rgb(78, 78, 199);
+    z-index: -5;
+    animation: glitch1 4s infinite, h1PageLoad 3s;
+}
+
+.fall2 {
+    position: relative;
+    top: -240px;
+    opacity: 30%;
+    color: rgb(253, 75, 75);
+    z-index: -10;
+    animation: glitch2 7s infinite, h1PageLoad 3s;
+}
+
+@keyframes h1PageLoad {
+    0% {
+        letter-spacing: 24px;
+        opacity: 0;
+    }
+}
+
+@keyframes glitch1 {
+    0% {
+        transform: skewY(0deg);
+    }
+    19.99999% {
+        transform: skewY(0deg);
+    }
+    20% {
+        transform: skewY(0deg);
+        transform: translateY(50px);
+    }
+    21% {
+        transform: skewY(5deg);
+    }
+    22% {
+        transform: skewY(0deg);
+    }
+}
+
+@keyframes glitch2 {
+    0% {
+        transform: skewY(0deg);
+    }
+    39.99999% {
+        transform: skewY(0deg);
+    }
+    40% {
+        transform: skewY(0deg);
+        transform: translateY(-50px);
+    }
+    41% {
+        transform: skewY(-5deg);
+    }
+    42% {
+        transform: skewY(0deg);
+    }
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+    font-family: "hiragino-kaku-gothic-pron", sans-serif;
+    font-size: 18px;
+    line-height: 130%;
+}
+
+/*
+ ##### Custom classes
+*/
+
+.img-screen {
+    display: flex;
+    background-color: rgb(var(--primary-rgb) / 15%);
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+    left: 0%;
+    transition: opacity 0.7s, left 1s;
+}
+
+.title {
+    padding-top: 120px;
+    /* adjust for relative pos divs */
+    margin-bottom: -80px;
+}
+
+.threed-article {
+    max-width: 1500px;
+}
+
+.main-image {
+    width: 100%;
+    margin: 0 auto;
+    height: 700px;
+}
+.main-image>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-embed-text {
+    position: absolute;
+    font-weight: bolder;
+    left: 30px;
+    top: 30px;
+    width: 60%;
+}
+
+.section-grid {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.section-grid-4-1 {
+    display:grid;
+    grid-template-columns: 4fr 1fr;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.section-grid-2-3 {
+    display:grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.section-grid, .section-grid-2-3, .section-grid-4-1 {
+    max-width: 95%;
+}
+
+.section-vid {
+    width: 100vw;
+    height: 500px;
+    position: absolute;
+    left: 0;
+}
+.section-vid>video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 40%;
+}
+
+.section-padding {
+    padding-bottom: 200px;
+}
+.section-vid-padding {
+    padding-bottom: 600px;
+}
+.section-vid>h1 {
+    position: relative;
+    top: -60%;
+    text-shadow: 0px 0px 20px black;
+}
+.article-justify {
+    text-align: justify;
+}
+.highlight {
+    color: rgb(243, 178, 0);
+}
+/* 
+######################################  RESPONSIVE  #####################################
+*/
+
+@media screen and (max-width: 1000px) {
+    h1 {
+        font-size: 70px;
+        letter-spacing: -4px;
+        text-wrap: nowrap;
+        animation: none;
+    }
+    .section-grid, .section-grid-2-3, .section-grid-4-1 {
+        max-width: 90%;
+    }
+    .section-grid-4-1 {
+        grid-template-columns: 2fr 1fr;
+    }
+    .fall1 {
+        top: -70px;
+        animation: none;
+    }
+    .fall2 {
+        top: -140px;
+        animation: none;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .section-vid>h1 {
+        scale: 0.7;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .section-vid>h1 {
+        scale: 0.8;
+    }
+    .section-grid, .section-grid-2-3, .section-grid-4-1 {
+        display: block;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    
+    h1 {
+        font-size: 50px;
+        letter-spacing: -4px;
+        text-wrap: nowrap;
+        animation: none;
+    }
+    h2 {
+        letter-spacing: 6px;
+        font-size: 18px;
+    }
+    .fall1 {
+        top: -50px;
+        animation: none;
+    }
+    .fall2 {
+        top: -100px;
+        animation: none;
+    }
+
+    .section-vid {
+        width: 100vw;
+        height: 400px;
+        padding-top: 80px;
+    }
+    .section-padding {
+        padding-bottom: 200px;
+    }
+    .section-vid-padding {
+        padding-bottom: 500px;
+    }
+
+    .main-image {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+}

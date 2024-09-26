@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+  <script src="scripts/scripts.js"></script>
+  <link rel="icon" type="image/x-icon" href="images/pdc_logo.png"> 
+  <title>IMD1005 A4: Styles of Animation</title>
+</head>
+
+<body>
+  <header>
+    <!--<nav class="sidebar">
+            <div class="screen-overlay"></div>
+            <a href="index.html">poop</a>
+            <a href="test.html">poop</a>
+        </nav>-->
+    </header>
+    <div id="screen-cover">
+        <div class="left">
+            <h1>PDC ZINE</h1>
+            <h2>STYLES • OF • ANIMATION</h2>
+        </div>
+        <div class="right" onclick="coverUp()">
+            <img src="images/down_arrow.svg" alt="arrow-button">
+        </div>
+        <div class="screen-overlay"></div>
+    </div>
+    <div class="gallery" id="screen-gal">
+        <div class="screen clickable" onclick="gotoPage(this, 34, 'anime.html')">
+          <div class="screen-image" id="screen-image-anime"></div>
+          <div class="screen-overlay"></div>
+          <div class="screen-content">
+            <div class="screen-user">
+              <span class="name">Anime</span>
+              <a class="link" href="...">Kenneth Hernandez & Anjali Salagala</a>
+            </div>
+          </div>
+        </div>
+        <div class="screen clickable" onclick="gotoPage(this, 0, '3d.html')">
+          <div class="screen-image" id="screen-image-3d"></div>
+          <div class="screen-overlay"></div>
+          <div class="screen-content">
+            <div class="screen-user">
+              <span class="name">3D</span>
+              <a class="link" href="...">Caelan Douglas</a>
+            </div>
+          </div>
+        </div>
+        <div class="screen clickable" onclick="gotoPage(this, -34, '25d.html')">
+          <div class="screen-image" id="screen-image-25d"></div>
+          <div class="screen-overlay"></div>
+          <div class="screen-content">
+            <div class="screen-user">
+              <span class="name">2.5D</span>
+              <a class="link" href="...">Mohamad Awad & Jason Okotete</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!--Mobile Screens-->
+  <div class="card-group">
+    <div class="screen">
+      <div class="screen-image" id="screen-image-anime"></div>
+      <div class="screen-overlay"></div>
+      <div class="screen-content">
+        <div class="screen-user">
+          <span class="name">Anime</span>
+          <a class="link" href="Anime.html">Ookiemaru & Jelly</a>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="screen">
+      <div class="screen-image" id="screen-image-3d"></div>
+      <div class="screen-overlay"></div>
+      <div class="screen-content">
+        <div class="screen-user">
+          <span class="name">3D</span>
+          <a class="link" href="3D.html">m'v</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="screen" onclick="gotoPage(this, -38)">
+      <div class="screen-image" id="screen-image-25d"></div>
+      <div class="screen-overlay"></div>
+      <div class="screen-content">
+        <div class="screen-user">
+          <span class="name">2.5D</span>
+          <a class="link" href="...">Mohamad Awad & Jason Okotete</a>
+        </div>
+      </div>
+    </div>
+
+    
+  </div>
+</body>
+
+</html>

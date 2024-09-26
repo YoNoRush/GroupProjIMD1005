@@ -1,0 +1,128 @@
+body {
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+.top_part
+{
+    background-image: url("../images/bg1.jpg");
+    background-size: auto;
+    -webkit-background-size: cover;
+}
+
+.title
+{
+    display: block;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width: 30vw;
+}
+
+hr
+{
+    margin: 25px;
+}
+
+h3
+{
+    font-size: 35px;
+    font-family: bangers;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+p
+{
+    font-family: action man;
+    font-size: 25px;
+    
+}
+
+.step_by_step
+{
+    display: flex;
+    justify-content: space-around;
+}
+
+.explanation
+{
+    text-justify: inter-word;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+.unique_exa
+{
+    border: 5px solid white;
+    margin-top: 25px;
+    width: 20vw;
+}
+
+.examples_appeal
+{
+    border: 5px solid white;
+    margin-top: 25px;
+    width: 20vw;
+    margin-bottom: 25px;
+}
+
+.examples_of_25d
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.poster_stack
+{
+    display: flex;
+    justify-content: space-around;
+}
+
+.poster_sections
+{
+    width: 20vw;
+    border: 5px solid white;
+    margin: 10px
+}
+
+@media screen and (max-width: 800px){
+    .poster_stack
+    {
+        flex-direction: column;
+        width:100%;
+    }
+
+    .poster_sections
+    {
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .step_by_step
+    {
+        flex-direction: column;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .unique_exa
+    {
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .examples_appeal
+    {
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
